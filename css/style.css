@@ -116,7 +116,7 @@ footer {
         inset-inline: 0;
         bottom: 0;
         padding: 1rem 0.75rem;
-        background-color: rgba(255, 255, 255, 0.94);
+        background-color: #ffffff;
         text-align: center;
     }
 
@@ -154,7 +154,7 @@ footer {
     }
 
     figcaption {
-        background-color: rgba(24, 35, 45, 0.97);
+        background-color: #18232d;
     }
 
     .skip-link:focus {
