@@ -1,0 +1,164 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    background-color: #f1f5f7;
+    color: #182530;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.page-header {
+    text-align: center;
+    padding-block: 2rem;
+}
+
+.eyebrow {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0.25rem 0;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    line-height: 1.1;
+}
+
+.introduction {
+    margin: 1rem 0;
+    font-size: 1.125rem;
+}
+
+.skip-link {
+    position: absolute;
+    left: -10000px;
+}
+
+.skip-link:focus {
+    position: static;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    background-color: #ffffff;
+    color: #182530;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    border: 3px solid #263746;
+    background-color: #ffffff;
+    color: #182530;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+figcaption {
+    padding: 1rem;
+}
+
+figcaption h3,
+figcaption p {
+    margin: 0;
+}
+
+figcaption h3 {
+    margin-bottom: 0.25rem;
+    font-size: 1.25rem;
+}
+
+footer {
+    padding-block: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 772px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    figure {
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+
+    figure img {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+    }
+
+    figcaption {
+        position: absolute;
+        inset-inline: 0;
+        bottom: 0;
+        padding: 1rem 0.75rem;
+        background-color: rgba(255, 255, 255, 0.94);
+        text-align: center;
+    }
+
+    figure:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 992px) {
+    figure {
+        border-radius: 0;
+    }
+
+    figure:nth-child(3n) {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #10151b;
+        color: #f1f3f5;
+    }
+
+    figure {
+        border-color: #000000;
+        background-color: #18232d;
+        color: #fff0a6;
+    }
+
+    figcaption {
+        background-color: rgba(24, 35, 45, 0.97);
+    }
+
+    .skip-link:focus {
+        background-color: #18232d;
+        color: #fff0a6;
+    }
+}
